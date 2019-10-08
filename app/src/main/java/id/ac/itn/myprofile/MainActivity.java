@@ -9,8 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    Button btn,btn2;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    Button btn, btn2,btnConstraint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,19 +20,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn.setOnClickListener(this);
         btn2 = findViewById(R.id.btnLayout2);
         btn2.setOnClickListener(this);
+        btnConstraint = findViewById(R.id.btnConstraint);
+        btnConstraint.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        if(view.getId()==R.id.btnLayout){
-            Log.d("MainActivity", "onClick: gak tampil bosss");
-            Intent intent = new Intent(MainActivity.this,LayoutGroupActivity.class);
-            startActivity(intent);
-        }
-        if(view.getId()==R.id.btnLayout2){
-            Log.d("MainActivity", "onClick: gak tampil bosss");
-            Intent intent = new Intent(MainActivity.this,LayoutGroup2Activity.class);
-            startActivity(intent);
+        switch (view.getId()) {
+
+            case (R.id.btnLayout):
+                Intent intent = new Intent(MainActivity.this, LayoutGroupActivity.class);
+                startActivity(intent);
+                break;
+            case (R.id.btnLayout2):
+                Intent intent2 = new Intent(MainActivity.this, LayoutGroup2Activity.class);
+                startActivity(intent2);
+                break;
+            case (R.id.btnConstraint):
+                Intent intent3 = new Intent(MainActivity.this, ConstraintLayoutActivity.class);
+                startActivity(intent3);
+                break;
+
         }
     }
 }

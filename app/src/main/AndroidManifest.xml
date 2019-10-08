@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LayoutGroup2Activity"></activity>
-        <activity android:name=".LayoutGroupActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ConstraintLayoutActivity" android:label="@string/app_constraint"></activity>
+        <activity android:name=".LayoutGroup2Activity" android:label="@string/app_layout" />
+        <activity android:name=".LayoutGroupActivity" android:label="@string/app_layout" />
+        <activity android:name=".MainActivity"
+            android:label="@string/app_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
