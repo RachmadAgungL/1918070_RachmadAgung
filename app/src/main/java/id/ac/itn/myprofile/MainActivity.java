@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btn, btn2,btnConstraint;
+    Button btn, btn2,btnConstraint, btnConstraint2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn2.setOnClickListener(this);
         btnConstraint = findViewById(R.id.btnConstraint);
         btnConstraint.setOnClickListener(this);
+        btnConstraint2 = findViewById(R.id.btnConstraint2);
+        btnConstraint2.setOnClickListener(this);
     }
 
     @Override
@@ -39,6 +41,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case (R.id.btnConstraint):
                 Intent intent3 = new Intent(MainActivity.this, ConstraintLayoutActivity.class);
                 startActivity(intent3);
+                break;
+            case (R.id.btnConstraint2):
+                Intent intent4 = new Intent(MainActivity.this, ConstraintLayout2Activity.class);
+                startActivity(intent4);
                 break;
 
         }

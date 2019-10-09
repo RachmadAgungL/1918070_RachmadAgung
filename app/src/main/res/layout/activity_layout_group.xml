@@ -4,174 +4,188 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LayoutGroupActivity"
-    android:background="@color/colorAbout">
+    android:background="@color/colorAbout"
+    tools:context=".LayoutGroupActivity">
+
     <RelativeLayout
+        android:id="@+id/topLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/topLayout"
         android:background="@android:color/white">
+
         <ImageView
+            android:id="@+id/app_bg"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/app_bg"
             android:scaleType="fitXY"
-            android:id="@+id/app_bg" />
+            android:src="@drawable/app_bg" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/tvnama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
             android:text="Bambang Sudarmono, S.Pd. M.Pd."
-            android:layout_centerHorizontal="true"
             android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:layout_marginTop="20dp" />
+            android:textSize="18sp" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/tvJob"
-            android:layout_below="@id/tvnama"
-            android:text="Mahasiswa Teknik Informatika ITN Malang"
-            android:layout_centerHorizontal="true"
-            android:textColor="@android:color/white"
-            android:textSize="15sp"
-            android:layout_marginTop="5dp" />
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tvnama"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Mahasiswa Teknik Informatika ITN Malang"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <TextView
             android:id="@+id/tvAlamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@id/tvJob"
-            android:text="Jl. Raya Karanglo Km.2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
             android:drawableStart="@drawable/ic_location_on_white_24dp"
             android:drawablePadding="8dp"
+            android:text="Jl. Raya Karanglo Km.2"
             android:textColor="@android:color/white"
-            android:layout_centerHorizontal="true"
-            android:textSize="15sp"
-            android:layout_marginTop="5dp" />
+            android:textSize="15sp" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:src="@drawable/profil"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="150dp"
-            app:civ_border_width="2dp"
-            app:civ_border_color="#FFF"/>
+            android:src="@drawable/profil"
+            app:civ_border_color="#FFF"
+            app:civ_border_width="2dp" />
 
         <LinearLayout
+            android:id="@+id/rlStatistik"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/rlStatistik"
-            android:weightSum="3"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal"
             android:layout_below="@+id/profile_image"
-            android:background="@android:color/white">
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
             <RelativeLayout
+                android:id="@+id/rlLeft"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginTop="16dp"
-                android:id="@+id/rlLeft">
+                android:layout_weight="1">
+
                 <TextView
+                    android:id="@+id/jApps"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
                     android:text="153"
-                    android:layout_centerHorizontal="true"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:id="@+id/jApps" />
+                    android:textStyle="bold" />
+
                 <TextView
+                    android:id="@+id/textApps"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Applications"
-                    android:layout_centerHorizontal="true"
                     android:layout_below="@+id/jApps"
-                    android:id="@+id/textApps" />
+                    android:layout_centerHorizontal="true"
+                    android:text="Applications" />
 
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="16dp"
-                android:id="@+id/rlCenter">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="793"
-                android:layout_centerHorizontal="true"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:id="@+id/jFollowers" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Followers"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/jFollowers"
-                android:id="@+id/textFollowers" />
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/rlCenter"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginTop="16dp"
-                android:id="@+id/rlRight">
+                android:layout_weight="1">
+
                 <TextView
+                    android:id="@+id/jFollowers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1534"
                     android:layout_centerHorizontal="true"
+                    android:text="793"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:id="@+id/jFollowing" />
+                    android:textStyle="bold" />
+
                 <TextView
+                    android:id="@+id/textFollowers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Following"
+                    android:layout_below="@+id/jFollowers"
                     android:layout_centerHorizontal="true"
+                    android:text="Followers" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlRight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/jFollowing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="1534"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textFollowing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/jFollowing"
-                    android:id="@+id/textFollowing" />
+                    android:layout_centerHorizontal="true"
+                    android:text="Following" />
 
             </RelativeLayout>
 
         </LinearLayout>
 
         <RelativeLayout
+            android:id="@+id/rlBottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/rlBottom"
             android:layout_below="@id/rlStatistik"
             android:background="@color/colorAbout">
+
             <TextView
+                android:id="@+id/tvAbout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="About"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:text="About"
                 android:textSize="20sp"
-                android:id="@+id/tvAbout"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/textAbout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/lorem_ipsum"
                 android:layout_below="@id/tvAbout"
-                android:id="@+id/textAbout"
-                android:textSize="14sp"
-                android:layout_margin="16dp" />
+                android:layout_margin="16dp"
+                android:text="@string/lorem_ipsum"
+                android:textSize="14sp" />
 
             <Button
+                android:id="@+id/btn"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/btn"
                 android:layout_below="@id/textAbout"
-                android:layout_margin="16dp"
                 android:layout_centerHorizontal="true"
+                android:layout_margin="16dp"
                 android:background="@drawable/button_bg"
                 android:text="Follow"
                 android:textColor="@android:color/white" />
